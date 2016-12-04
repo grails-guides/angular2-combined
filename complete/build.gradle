@@ -112,8 +112,8 @@ war.dependsOn(buildClient)
 
 test.dependsOn(clientTest)
 
-gradle.projectsEvaluated {
-    integrationTest.dependsOn(clientIntegrationTest)
+integrationTest {
+    dependsOn clientIntegrationTest
 }
 
 clean {
