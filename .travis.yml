@@ -1,9 +1,13 @@
+language: node_js
+node_js:
+  - '6'
 sudo: false
 cache:
   directories:
   - $HOME/.gradle
 jdk:
 - oraclejdk8
+before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 before_script:
 - rm -rf target
 script: ./travis-build.sh
