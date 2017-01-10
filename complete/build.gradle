@@ -71,7 +71,7 @@ bootRun {
 }
 
 node {
-    version = '6.9.1'
+    version = '6.9.4'
     download = true
     nodeModulesDir = file("src/main/client")
 }
