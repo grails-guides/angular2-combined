@@ -8,8 +8,6 @@ chmod 777 build-guide
 
 sed -i '/\.\/gradlew check/d' ./build-guide
 
-cat ./build-guide
-
 ./build-guide || EXIT_STATUS=$?
 
 exit $EXIT_STATUS
