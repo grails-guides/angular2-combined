@@ -1,10 +1,10 @@
-language: node_js
-node_js:
-  - '6'
+language: java
 sudo: false
 jdk:
-- oraclejdk8
-before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+ - oraclejdk8
+before_install:
+ - nvm install 6
+ - ./gradlew -version
 before_script:
 - rm -rf target
 script: ./travis-build.sh
