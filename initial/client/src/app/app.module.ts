@@ -1,29 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { IndexComponent } from './index/index.component';
-import { AppComponent } from './app.component';
-import { rootRouterConfig } from './app.routes';
-import { NavComponent } from './nav/nav.component';
-import { NavService } from './nav/nav.service';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {IndexComponent} from "./index/index.component";
+import {NavComponent} from "./nav/nav.component";
+import {NavService} from "./nav/nav.service";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {HttpClientModule} from "@angular/common/http";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    IndexComponent
+    IndexComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(rootRouterConfig),
-    NgbModule.forRoot()
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, NavService],
   bootstrap: [AppComponent]
