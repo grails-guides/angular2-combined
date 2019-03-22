@@ -14,6 +14,12 @@ task bootRun(type: YarnTask, dependsOn: 'yarn') {
     args = ['run', 'start']
 }
 
+task build(type: YarnTask, dependsOn: 'yarn') {
+  group = 'build'
+  description = 'Build the client bundle'
+  args = ['run', 'build']
+}
+
 task test(type: YarnTask, dependsOn: 'yarn') {
     group = 'verification'
     description = 'Execute unit tests'
