@@ -1,5 +1,7 @@
 package angular.test.app
 
+import grails.util.Environment
+
 class UrlMappings {
 
     static mappings = {
@@ -10,7 +12,14 @@ class UrlMappings {
         put "/$controller/$id(.$format)?"(action:"update")
         patch "/$controller/$id(.$format)?"(action:"patch")
 
-        "/"(controller: 'application', action:'index')
+        //tag::defaultPage[]
+        if ( Environment.current == Environment.PRODUCTION ) {
+            '/'(uri: '/index.html')
+        } else {
+            '/'(controller: 'application', action:'index')
+        }
+        //end::defaultPage[]
+
         "500"(view: '/error')
         "404"(view: '/notFound')
     }
