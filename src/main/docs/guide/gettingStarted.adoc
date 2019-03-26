@@ -1,1 +1,7 @@
-The Angular 2 profile in Grails 3 provides a multi project build out of the box. Today there are many options for how to build and package your applications. It is important to decide for yourself what is best for your needs. For those who prefer to have the client side application bundled together with their Grails application, this guide is for you. In this guide I will cover some quick simple steps to get up and running with a combined project starting from the multi project build created from the Angular 2 profile.
+In this guide, you are going to create a combined build of the `server` and
+`client` projects from the Angular profile. By default, the Angular profile sets up
+separate frontend and backend apps, which can make for a more efficient development process.
+However, this may not fit your deployment needs, particularly if your entire app is
+being deployed to a servlet container such as Tomcat, or being executed as a "fat" JAR.
+Thanks to the flexibility of Grails and the Gradle build tool, we can configure a
+unified build of our Grails/Angular app with only a few changes.
