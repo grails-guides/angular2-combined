@@ -1,4 +1,4 @@
-package angular.test.app
+package example.grails
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

@@ -1,4 +1,4 @@
-package angular.test.app
+package example.grails
 
 class BootStrap {
 

@@ -14,11 +14,11 @@ include::{sourceDir}/server/grails-app/conf/application.yml[indent=0, tag=grails
 This simply sets the static resources URL to be set to the root context.
 
 Along similar lines, we need to edit the URL that the Angular app uses to make REST calls against the Grails app.
-This can be done within `client/config/prod.env.js` in the `client` project. This file is used in the production environment and
-sets the SERVER_URL to the root context.
+This can be done within `client/src/environments/environment.prod.ts` in the `client` project. This file is used in the production environment and
+sets the `serverUrl` to the root context.
 
 [source,javascript]
-.client/config/prod.env.js
+.client/src/environments/environment.prod.ts
 ----
-include::{sourceDir}/client/config/prod.env.js[indent=0]
+include::{sourceDir}/client/src/environments/environment.prod.ts[indent=0]
 ----
